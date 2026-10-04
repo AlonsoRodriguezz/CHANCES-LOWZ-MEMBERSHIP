@@ -1,6 +1,8 @@
 # CHANCES Low - $z$ Galaxy Cluster Membership with Random Forest
 
-![CHANCES Logo](https://chances.uda.cl/wp-content/uploads/2025/10/logo_chances_2022.png)
+<p align="center">
+  <img src="assets/logo_chances.png" alt="CHANCES Logo" width="280">
+</p>
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 

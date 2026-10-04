@@ -1,7 +1,7 @@
 # CHANCES Low - $z$ Galaxy Cluster Membership with Random Forest
 
 <p align="center">
-  <img src="assets/logo_chances.png" alt="CHANCES Logo" width="280">
+  <img src="assets/logo_chances.png" alt="CHANCES Logo" width="200">
 </p>
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)

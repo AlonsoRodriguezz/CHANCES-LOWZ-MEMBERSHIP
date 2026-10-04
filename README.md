@@ -1,26 +1,26 @@
 # CHANCES Low - $z$ Galaxy Cluster Membership with Random Forest
 
-<img src = "assets/logo_chances_2022.png" alt = "CHANCES Logo" height = "80">
+<img src="assets/logo_chances_2022.png" alt="CHANCES Logo" height="80">
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 
 This repository contains the machine learning pipeline developed for the publication:
 
-> **Mapping cluster infall regions I: Identification of galaxies in the neighborhood of clusters  out to  $5 \mathrm{R}_{200}$**  
-> *Franco Piraino-Cerda & Authors*  
+> **Mapping cluster infall regions I: Identification of galaxies in the neighborhood of clusters out to  $5 \mathrm{R}_{200}$**  
+> *Franco Piraino-Cerda et al. (add co-authors if needed)*  
 > *Journal / Year* — [DOI / Link]
 
-The code classiffies galaxy cluster members out to $5\ \mathrm{R}_{200}$ and is trained on mock catalogs from the CHANCES Low - $z$ sub-survey. For any inquiries please contact [Gerardo Rodríguez](https://github.com/AlonsoRodriguezz).
+The code classifies galaxy cluster members out to $5\ \mathrm{R}_{200}$ and is trained on mock catalogs from the CHANCES Low - $z$ sub-survey. For any inquiries please contact [Gerardo Rodríguez](https://github.com/AlonsoRodriguezz).
 
 ## Repository Structure 
 
-```bash
+```text
 ├── data/
 │   ├── clust_to_sim_all_dyn_state_relax.fits  # Cluster properties table
-│   └── df_rmag_20_4.parquet                   # Precompued table for a 20.4 r-band cut
-│   └── df_rmag_18_5.parquet                   # Precomputed table for a 18.5 r-band cut
+│   ├── df_rmag_20_4.parquet                   # Precomputed table for a 20.4 r-band cut
+│   ├── df_rmag_18_5.parquet                   # Precomputed table for a 18.5 r-band cut
 │   └── RF_clone.pkl                           # Pre-trained Random Forest model for reference parameters
-├── GridsearchCV.py                            # GridsearchCV scheme as in the paper
+├── GridsearchCV_pipe.ipynb                    # GridsearchCV scheme as in the paper
 ├── main.py                                    # Execution script
 ├── main.ipynb                                 # Notebook equivalent to execution script
 ├── test.py                                    # Testing and validation script
@@ -37,20 +37,23 @@ The pipeline implements the following workflow:
 
 2. **Feature Selection and Engineering:**
    * r-band magnitude $m_r$
-   * Log-local density estimation $\mathrm{log} \Sigma_{10}$
+   * Log-local density estimation $\log\ \Sigma_{10}$
    * Phase-space parameters $R_{\mathrm{norm}} = \frac{r_{\mathrm{proj}}}{R_{200}}$, $V_{\mathrm{norm}}=\frac{V_{\mathrm{pec}}}{\sigma_{200}}$
    * Associated halo virial mass $M_{200}$
 
-3. **Model Application:** Reads reference hyperparameters from `rf_reference_model.pkl` to train the Random Forest classifier, using a LeaveOneGroupOut cross-validation scheme.
+3. **Model Application:** Reads reference hyperparameters from `RF_clone.pkl` to train the Random Forest classifier, using a LeaveOneGroupOut cross-validation scheme.
 
-4. **Output:** Exports membership predictions and generates diagnostic figures to a new directory.
+4. **Outputs:** Generates an output directory containing:
+   * `.pkl` **file**: Trained Random Forest model.
+   * `.parquet` **file**: Contains predicted probabilities and membership classifications.
+   * **Diagnostic figures:** Performance and validation plots (confusion matrix, correlation matrix, phase space, purity and completeness, feature importances, ROC curve, optional learning curve).
 
 ## Installation & Usage
 
 1.  **Clone the repository:**    
     ```bash
     git clone https://github.com/4MOST-CHANCES/CHANCES_LOWZ_MEMBERSHIP.git
-    cd chances-lowz-membership
+    cd CHANCES_LOWZ_MEMBERSHIP
     ```
 2.  **Install dependencies:**
     ```bash
@@ -90,7 +93,7 @@ The pipeline implements the following workflow:
 
 ## Citation
 
-If you use this pipeline or pre-trained models, please cite the corresponding paper:
+If you use this pipeline or pre-trained models for your investigation, please cite the corresponding paper:
 
 ```bibtex
 @article{...,

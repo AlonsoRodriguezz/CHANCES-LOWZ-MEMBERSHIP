@@ -1,19 +1,16 @@
 # CHANCES Low - $z$ Galaxy Cluster Membership with Random Forest
 
-<p align="center">
-  <img src="assets/logo_chances.png" alt="CHANCES Logo" width="200">
-</p>
+<img src = "assets/logo_chances_2022.png" alt = "CHANCES Logo" height = "80">
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 
 This repository contains the machine learning pipeline developed for the publication:
 
-> **Mapping cluster infall regions I:  
-Identification of galaxies in the neighborhood of clusters  out to  $5 \mathrm{R}_{200}$**  
+> **Mapping cluster infall regions I: Identification of galaxies in the neighborhood of clusters  out to  $5 \mathrm{R}_{200}$**  
 > *Franco Piraino-Cerda & Authors*  
 > *Journal / Year* — [DOI / Link]
 
-The code classiffies galaxy cluster members out to $5\ \mathrm{R}_{200}$ and is trained on mock catalogs from the CHANCES Low - $z$ sub-survey.
+The code classiffies galaxy cluster members out to $5\ \mathrm{R}_{200}$ and is trained on mock catalogs from the CHANCES Low - $z$ sub-survey. For any inquiries please contact [Gerardo Rodríguez](https://github.com/AlonsoRodriguezz).
 
 ## Repository Structure 
 
@@ -22,7 +19,7 @@ The code classiffies galaxy cluster members out to $5\ \mathrm{R}_{200}$ and is 
 │   ├── clust_to_sim_all_dyn_state_relax.fits  # Cluster properties table
 │   └── df_rmag_20_4.parquet                   # Precompued table for a 20.4 r-band cut
 │   └── df_rmag_18_5.parquet                   # Precomputed table for a 18.5 r-band cut
-│   └── rf_reference_params.pkl                # Pre-trained Random Forest model for reference parameters
+│   └── RF_clone.pkl                           # Pre-trained Random Forest model for reference parameters
 ├── GridsearchCV.py                            # GridsearchCV scheme as in the paper
 ├── main.py                                    # Execution script
 ├── main.ipynb                                 # Notebook equivalent to execution script
@@ -95,7 +92,6 @@ The pipeline implements the following workflow:
 
 If you use this pipeline or pre-trained models, please cite the corresponding paper:
 
-(REPLACE WITH BIBTEX)
 ```bibtex
 @article{...,
   author = {...},

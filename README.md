@@ -4,7 +4,7 @@
 
 Code and models accompanying the publication:
 > **[Mapping cluster infall regions I:  
-Identification of galaxies\\ in the neighborhood of clusters  out to  5R$_{200}$]**  
+Identification of galaxies\\ in the neighborhood of clusters  out to  5R$_{200}$]()**  
 > *Author List*  
 > *Journal / Year* — [DOI / Link]
 

@@ -1,5 +1,14 @@
 # CHANCES Low-$Z$ Galaxy Cluster Membership with Random Forest
 
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![Survey](https://img.shields.io/badge/Survey-CHANCES-darkred.svg)](https://chances.space/)
+
+Code and models accompanying the publication:
+> **[Paper Title Here]**  
+> *Author List*  
+> *Journal / Year* — [DOI / Link]
+
+
 We use a RandomForestClassiffier to tackle the membership task up to $5\,R_{vir}$
 
 

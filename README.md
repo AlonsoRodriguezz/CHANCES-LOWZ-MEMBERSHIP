@@ -1,10 +1,10 @@
 # CHANCES Low-$Z$ Galaxy Cluster Membership with Random Forest
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![Survey](https://img.shields.io/badge/Survey-CHANCES-darkred.svg)](https://chances.space/)
 
 Code and models accompanying the publication:
-> **[Paper Title Here]**  
+> **[Mapping cluster infall regions I:  
+Identification of galaxies\\ in the neighborhood of clusters  out to  5R$_{200}$]**  
 > *Author List*  
 > *Journal / Year* — [DOI / Link]
 

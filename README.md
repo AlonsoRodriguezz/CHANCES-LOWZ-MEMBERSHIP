@@ -53,7 +53,7 @@ The pipeline implements the following workflow:
 
 1.  **Clone the repository:**    
     ```bash
-    git clone https://github.com/4MOST-CHANCES/CHANCES-LOWZ-MEMBERSHIP.git
+    git clone https://github.com/AlonsoRodriguezz/CHANCES-LOWZ-MEMBERSHIP.git
     cd CHANCES-LOWZ-MEMBERSHIP
     ```
 2.  **Install dependencies:**

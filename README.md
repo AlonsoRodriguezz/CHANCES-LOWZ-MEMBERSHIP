@@ -25,6 +25,7 @@ The code classifies galaxy cluster members out to $5\ \mathrm{R}_{200}$ and is t
 ├── main.py                                              # Training script
 ├── main.ipynb                                           # Notebook equivalent to training script
 ├── test.py                                              # Model testing script
+├── test.ipynb                                           # Notebook equivalent to model testing script
 ├── plots.py                                             # Plotting functions script (imported by main)
 ├── requirements.txt                                     # Python dependencies
 └── README.md

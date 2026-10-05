@@ -63,6 +63,21 @@ The pipeline implements the following workflow:
     ```bash
     pip install -r requirements.txt
     ```
+    > **Note for Anaconda users:** To avoid breaking your `base` environment due to version conflicts, we highly recommend creating a dedicated environment before installing the requirements:
+    > ```bash
+    > conda create -n chances_lowz python=3.10
+    > conda activate chances_lowz
+    > pip install -r requirements.txt
+    > ```
+    > Then, you can access your environment using:
+    > ```bash
+    > conda activate chances_lowz
+    > ```
+    > If you wish to deactivate the environment:
+    > ```bash
+    > conda deactivate chances_lowz
+    > ```     
+    
 3.  **Configure Mock Catalog Paths:**
     The pipeline requires CHANCES mock catalogs to operate:
     * **`main.py` / `main.ipynb`:** requires your **training mocks**.
@@ -94,6 +109,7 @@ The pipeline implements the following workflow:
     python test.py
     ```
     or use the `test.ipynb` instead.
+    > **Note:** If you only want to use the test script, you may do so and avoid running `main.py`/`main.ipynb` and use the model provided, same thing applies once you have trained your own model, you can skip the training phase. Always make sure to point towards the trained model correctly in your script.
 
 ## Citation
 

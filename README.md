@@ -7,7 +7,7 @@
 This repository contains the machine learning pipeline developed for the publication:
 
 > **Mapping cluster infall regions I: Identification of galaxies in the neighborhood of clusters out to  $5 \mathrm{R}_{200}$**  
-> *Franco Piraino-Cerda et al. (add co-authors if needed)*  
+> *Franco Piraino-Cerda et al.*  
 > *Journal / Year* — [DOI / Link]
 
 The code classifies galaxy cluster members out to $5\ \mathrm{R}_{200}$ and is trained on mock catalogs from the CHANCES Low - $z$ sub-survey. For any inquiries please contact [Gerardo Rodríguez](https://github.com/AlonsoRodriguezz).

@@ -18,12 +18,9 @@ The code classifies galaxy cluster members out to $5\ \mathrm{R}_{200}$ and is t
 ├── data/
 │   ├── train/
 │   │   ├── clust_to_sim_all_dyn_state_relax_train.fits  # Training cluster properties table
-│   │   ├── df_rmag_20_4_master.parquet                  # Precomputed table for a 20.4 r-band cut (training)
-│   │   ├── df_rmag_18_5_master.parquet                  # Precomputed table for a 18.5 r-band cut (training)
 │   │   └── RF_clone.pkl                                 # Pre-trained Random Forest model for reference parameters
 │   └── test/
-│       ├── clust_to_sim_all_dyn_state_relax_test.fits   # Validation cluster properties table
-│       └── df_rmag_20_4_test.parquet                    # Precomputed table for a 20.4 r-band cut (testing)
+│       └── clust_to_sim_all_dyn_state_relax_test.fits   # Validation cluster properties table
 ├── GridsearchCV_pipe.ipynb                              # GridsearchCV scheme as in the paper
 ├── main.py                                              # Training script
 ├── main.ipynb                                           # Notebook equivalent to training script
@@ -37,7 +34,7 @@ The code classifies galaxy cluster members out to $5\ \mathrm{R}_{200}$ and is t
 
 The pipeline implements the following workflow:
 
-1. **Data Processing:** Reads mocks, links cluster properties from `clust_to_sim_all_dyn_state_relax_train.fits`, and loads or generates the corresponding `.parquet` table for a given $r$-band cut.
+1. **Data Processing:** Reads mocks, links cluster properties from `clust_to_sim_all_dyn_state_relax_train.fits`, and loads or generates the corresponding `*_master.parquet` table for a given $r$-band cut.
 
 2. **Feature Selection and Engineering:**
    * r-band magnitude $m_r$

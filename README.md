@@ -34,7 +34,7 @@ The code classifies galaxy cluster members out to $5\ \mathrm{R}_{200}$ and is t
 
 The pipeline implements the following workflow:
 
-1. **Data Processing:** Reads mocks, links cluster properties from `clust_to_sim_all_dyn_state_relax_train.fits`, and loads or generates the corresponding `*_master.parquet` table for a given $r$-band cut.
+1. **Data Processing:** Reads mocks, links cluster properties from `clust_to_sim_all_dyn_state_relax_train.fits`, and loads or generates the corresponding `*_master.parquet` table for a given $r$-band cut. If you want to save some time *you can download* the `df_rmag_20_4_master.parquet` and `df_rmag_18_5_master.parquet` (for a 20.4 and 18.5 $r$-band cut respectively) files from [this link](link-to-drive) and store them in your data/train/ folder.
 
 2. **Feature Selection and Engineering:**
    * r-band magnitude $m_r$

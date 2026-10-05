@@ -73,15 +73,15 @@ The pipeline implements the following workflow:
     > ```bash
     > conda activate chances_lowz
     > ```
-    > If you wish to deactivate the environment:
+    > Later on, to deactivate the environment when you are done:
     > ```bash
-    > conda deactivate chances_lowz
+    > conda deactivate
     > ```     
     
 3.  **Configure Mock Catalog Paths:**
     The pipeline requires CHANCES mock catalogs to operate:
     * **`main.py` / `main.ipynb`:** requires your **training mocks**.
-    * **`test.py` / `test.ipynb`:** requires the mocks allocated for **model validation/testing**.
+    * **`test.py` / `test.ipynb`:** requires your **model testing mocks**.
 
     **You must ensure the mock directory path is correctly set:**
 
@@ -91,11 +91,11 @@ The pipeline implements the following workflow:
     # Directories
     base_dir = os.path.dirname(os.path.abspath(__file__))
 
-    # Option A: Place your mocks inside the repo folder (e.g. 'repo_folder/Mocks/')
-    mocks_path = os.path.join(base_dir, 'Mocks')
+    # Option A: Place your mocks inside the repo folder (e.g. 'repo_folder/Mocks_training/')
+    mocks_path = os.path.join(base_dir, 'Mocks_training') # or 'Mocks_testing'
 
     # Option B: Point to an external storage directory
-    mocks_path = '/path/to/your/external/storage/Mocks/'
+    mocks_path = '/path/to/your/external/storage/Mocks_training/'
     ```
     
 4.  **Run the script over your training set**, you can run the full pipeline either from the terminal or interactively in a jupyter notebook:
@@ -109,7 +109,7 @@ The pipeline implements the following workflow:
     python test.py
     ```
     or use the `test.ipynb` instead.
-    > **Note:** If you only want to use the test script, you may do so and avoid running `main.py`/`main.ipynb` and use the model provided, same thing applies once you have trained your own model, you can skip the training phase. Always make sure to point towards the trained model correctly in your script.
+    > **Note:** If you only want to validate using a reference model (e.g. the one provided here), you can run `test.py`/`test.ipynb` directly and skip the training phase (`main.py`/`main.ipynb`), same thing applies for future runs once you have trained your own model running `main.py`. Always ensure the script points to your intended trained model path.
 
 ## Citation
 

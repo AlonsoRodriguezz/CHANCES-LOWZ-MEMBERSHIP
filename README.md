@@ -7,10 +7,10 @@
 This repository contains the machine learning pipeline developed for the publication:
 
 > **Mapping cluster infall regions I: Identification of galaxies in the neighborhood of clusters out to  $5 \mathrm{R}_{200}$**  
-> *Franco Piraino-Cerda et al.*  
-> *Journal / Year* — [DOI / Link]
+> *Piraino-Cerda et al. (2026)*  
+> DOI: [DOI / Link]
 
-The code classifies galaxy cluster members out to $5\ \mathrm{R}_{200}$ and is trained on mock catalogs from the CHANCES Low - $z$ sub-survey. For any inquiries please contact [Gerardo Rodríguez](https://github.com/AlonsoRodriguezz).
+The code classifies galaxy cluster members out to $5\ \mathrm{R}_{200}$ and is trained on mock catalogs from the CHANCES Low - $z$ sub-survey. For any **inquiries please contact** [Gerardo Rodríguez](https://github.com/AlonsoRodriguezz).
 
 ## Repository Structure 
 
@@ -61,7 +61,7 @@ The pipeline implements the following workflow:
     ```bash
     pip install -r requirements.txt
     ```
-    > **Note for Anaconda users:** To avoid breaking your `base` environment due to version conflicts, we highly recommend creating a dedicated environment before installing the requirements:
+    > **Note for Anaconda users:** To avoid breaking your `base` environment due to version conflicts, we highly recommend creating a dedicated environment (same goes if you use other environment managers) before installing the requirements:
     > ```bash
     > conda create -n chances_lowz python=3.10
     > conda activate chances_lowz
@@ -74,7 +74,7 @@ The pipeline implements the following workflow:
     > Later on, to deactivate the environment when you are done:
     > ```bash
     > conda deactivate
-    > ```     
+    > ```
     
 3.  **Configure Mock Catalog Paths:**
     The pipeline requires CHANCES mock catalogs to operate:

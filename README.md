@@ -80,7 +80,9 @@ The pipeline implements the following workflow:
     The pipeline requires CHANCES mock catalogs to operate:
     * **`main.py` / `main.ipynb`:** requires your **training mocks**.
     * **`test.py` / `test.ipynb`:** requires your **model testing mocks**.
-
+    
+    The model expects the mocks filenames to follow the pattern: `Abell_*_*_photoz_true_neighbours_relax`
+    
     **You must ensure the mock directory path is correctly set:**
 
     In `main.py`/`main.ipynb` (and similarly in `test.py`/`test.ipynb`), check the directories block:
